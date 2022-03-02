@@ -12,12 +12,26 @@ main() {
 
   print("---------------------------------OLÁ, BEM-VINDO! ESCOLHA UMA DAS OPÇÕES----------------------------------");
 
-  print("1 - PARA ADICIONAR UM NOME | 2 - PARA REMOVER UM NOME | 3 PARA LISTAR OS NOMES | 4 - PARA ACESSAR UM NOME");
+  print("1 - PARA ADICIONAR UM NOME | 2 - PARA SAIR ");
 
-  List<String> nomes = [];
-
-  print("DIGITE UMAS DAS OPÇÕES ACIMA");
-  int opcao = stdin.readLineSync()!;
-
+  var nome = [];
+  bool condicao = true;
   
+  print("DIGITE UMA DAS OPÇÕES ACIMA");
+  var ValorOpcao = stdin.readLineSync();
+  var opcao = int.parse(ValorOpcao!);
+  
+  if(opcao == 1){
+    while(condicao){
+      print("INFORME UM NOME");
+       String texto = stdin.readLineSync()!;
+       nome.add(texto);
+       print(nome);
+        // print("\n");
+    }
+  }else if(opcao == 2){
+    condicao = false;
+    print("tchau!!");
+  }
+    
 }
